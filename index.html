@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Code Library</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f6f8;
+padding:20px;
+}
+
+h1{
+text-align:center;
+}
+
+.code-box{
+background:#fff;
+border:1px solid #ccc;
+padding:15px;
+margin:25px 0;
+border-radius:6px;
+position:relative;
+}
+
+.file-name{
+font-weight:bold;
+margin-bottom:10px;
+}
+
+pre{
+background:#f9f9f9;
+padding:10px;
+overflow-x:auto;
+font-family:monospace;
+}
+
+.copy-btn{
+position:absolute;
+top:10px;
+right:10px;
+padding:6px 12px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+.copy-btn:hover{
+background:#0056b3;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>HTML Code Library</h1>
+
+
+<!-- 1 toggle.html -->
+<div class="code-box">
+
+<div class="file-name">1. toggle.html</div>
+<button class="copy-btn">Copy Code</button>
+
+<pre><code>
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;script src="C:\Users\ketan\Desktop\New folder (2)\jquery.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+$(document).ready(function() {
+
+$("#b1").click(function(){
+
+$("p").toggle();
+
+$("p").css("background", "lightgreen");
+
+});
+
+});
+
+&lt;/script&gt;
+
+&lt;body&gt;
+
+&lt;button id="b1"&gt;Toggle Button&lt;/button&gt;
+
+&lt;p&gt;This is a paragraph with little content.&lt;/p&gt;
+
+&lt;p&gt;This is another small paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+</div>
+
+
+<!-- 2 hide show -->
+<div class="code-box">
+
+<div class="file-name">2. hide show.html</div>
+<button class="copy-btn">Copy Code</button>
+
+<pre><code>
+
+&lt;html&gt;
+&lt;head&gt;
+
+&lt;script src="C:\Users\ketan\Desktop\New folder (2)\jquery.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+$(document).ready(function(){
+
+ $("#b1").click(function(){
+
+$("p").hide(1000);
+
+});
+
+$("#b2").click(function(){
+
+$("p").show("fast");
+
+});
+
+});
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;button id="b1"&gt;Hide&lt;/button&gt;
+&lt;button id="b2"&gt;Show&lt;/button&gt;
+
+&lt;p&gt;This is a paragraph with little content.&lt;/p&gt;
+
+&lt;p&gt;This is another small paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+</div>
+
+
+<!-- 3 calculator -->
+<div class="code-box">
+
+<div class="file-name">3. simple calculator.html</div>
+<button class="copy-btn">Copy Code</button>
+
+<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Simple Calculator&lt;/title&gt;
+
+&lt;style&gt;
+
+body{
+font-family:Arial;
+margin:40px;
+}
+
+.calculator{
+width:300px;
+padding:20px;
+border:2px solid #333;
+border-radius:8px;
+background:#f9f9f9;
+}
+
+input,select,button{
+margin:10px 0;
+padding:8px;
+width:100%;
+}
+
+#result{
+font-weight:bold;
+margin-top:15px;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div class="calculator"&gt;
+
+&lt;h2&gt;Arithmetic Calculator&lt;/h2&gt;
+
+&lt;input type="number" id="num1" placeholder="Enter first number"&gt;
+
+&lt;input type="number" id="num2" placeholder="Enter second number"&gt;
+
+&lt;select id="operation"&gt;
+
+&lt;option value="add"&gt;Addition (+)&lt;/option&gt;
+&lt;option value="subtract"&gt;Subtraction (-)&lt;/option&gt;
+&lt;option value="multiply"&gt;Multiplication (×)&lt;/option&gt;
+&lt;option value="divide"&gt;Division (÷)&lt;/option&gt;
+&lt;option value="modulus"&gt;Modulus (%)&lt;/option&gt;
+
+&lt;/select&gt;
+
+&lt;button onclick="calculate()"&gt;Calculate&lt;/button&gt;
+
+&lt;div id="result"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+
+function calculate(){
+
+let num1=parseFloat(document.getElementById("num1").value);
+let num2=parseFloat(document.getElementById("num2").value);
+let operation=document.getElementById("operation").value;
+
+let result;
+
+switch(operation){
+
+case "add":
+result=num1+num2;
+break;
+
+case "subtract":
+result=num1-num2;
+break;
+
+case "multiply":
+result=num1*num2;
+break;
+
+case "divide":
+result=num1/num2;
+break;
+
+case "modulus":
+result=num1%num2;
+break;
+
+}
+
+document.getElementById("result").innerText="Result: "+result;
+
+}
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+</div>
+
+
+<!-- 4 list.html -->
+<div class="code-box">
+
+<div class="file-name">4. list.html</div>
+<button class="copy-btn">Copy Code</button>
+
+<pre><code>
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Dropdown Menu Example&lt;/title&gt;
+
+&lt;style&gt;
+
+ul{
+list-style:none;
+background:black;
+padding:10px;
+}
+
+ul li{
+display:inline-block;
+color:white;
+padding:10px;
+cursor:pointer;
+}
+
+.dropdown{
+display:none;
+position:absolute;
+background:black;
+}
+
+li:hover .dropdown{
+display:block;
+}
+
+.dropdown li{
+display:block;
+}
+
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;ul&gt;
+
+&lt;li&gt;Home&lt;/li&gt;
+
+&lt;li&gt;
+
+Indian City
+
+&lt;ul class="dropdown"&gt;
+
+&lt;li onclick="showCity('Mumbai')"&gt;Mumbai&lt;/li&gt;
+&lt;li onclick="showCity('Delhi')"&gt;Delhi&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;div id="result"&gt;
+
+&lt;h3&gt;Famous Monument&lt;/h3&gt;
+&lt;p&gt;Select a city&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+
+function showCity(city){
+
+let result=document.getElementById("result");
+
+if(city=="Mumbai"){
+
+result.innerHTML=
+"&lt;h3&gt;Gateway of India&lt;/h3&gt;"+
+"&lt;p&gt;Historic monument in Mumbai.&lt;/p&gt;"+
+"&lt;img src='mumbai.jpg' width='300'&gt;";
+
+}
+
+if(city=="Delhi"){
+
+result.innerHTML=
+"&lt;h3&gt;India Gate&lt;/h3&gt;"+
+"&lt;p&gt;Famous war memorial in Delhi.&lt;/p&gt;"+
+"&lt;img src='delhi.jpg' width='300'&gt;";
+
+}
+
+}
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+</div>
+
+
+<!-- 5 ajax.html -->
+<div class="code-box">
+
+<div class="file-name">5. ajax.html</div>
+<button class="copy-btn">Copy Code</button>
+
+<pre><code>
+
+&lt;html&gt;
+
+&lt;body&gt;
+
+&lt;h2&gt;Live Weather Data&lt;/h2&gt;
+
+&lt;input type="text" id="city" placeholder="Enter city name"&gt;
+
+&lt;button onclick="getWeather()"&gt;Get Weather&lt;/button&gt;
+
+&lt;div id="result"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+
+function getWeather(){
+
+var city=document.getElementById("city").value;
+
+var apiKey="04523872fd32a8ac59c8155f4b1b3f61";
+
+var url="https://api.openweathermap.org/data/2.5/weather?q="
++city+
+"&appid="+apiKey+
+"&units-metric";
+
+var xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function(){
+
+if(this.readyState==4 && this.status==200){
+
+var data=JSON.parse(this.responseText);
+
+var temp=data.main.temp;
+var humidity=data.main.humidity;
+var condition=data.weather[0].description;
+
+document.getElementById("result").innerHTML=
+
+"&lt;h3&gt;Weather in "+city+"&lt;/h3&gt;"+
+"Temperature: "+temp+" C &lt;br&gt;"+
+"Humidity: "+humidity+"% &lt;br&gt;"+
+"Condition: "+condition;
+
+}
+
+};
+
+xhttp.open("GET",url,true);
+
+xhttp.send();
+
+}
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code></pre>
+</div>
+
+
+
+<script>
+
+const buttons=document.querySelectorAll(".copy-btn");
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const code=button.nextElementSibling.innerText;
+
+navigator.clipboard.writeText(code);
+
+button.innerText="Copied!";
+
+setTimeout(()=>{
+button.innerText="Copy Code";
+},1500);
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
